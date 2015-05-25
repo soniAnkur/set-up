@@ -1,8 +1,18 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
-    karma = require('gulp-karma');
-    gulp = require('gulp');
+    karma = require('gulp-karma'),
+    ts = require('gulp-typescript');
+
+gulp.task('typescript', function() {
+    console.log('Compiling typescript');
+    return gulp.src(['app/**/*.ts'])
+        .pipe(ts({module: 'commonjs'}))
+        .pipe(gulp.dest('app'))
+        .on('finish', function(){
+            console.log("finished compiling typescript")
+        });
+});
 
 var testFiles = [
     'node_modules/angular/angular.js',
@@ -30,4 +40,4 @@ gulp.task('lint', function () {
   return gulp.src(['**/*.js', '!node_modules{,/**}']).pipe(jshint()).pipe(jshint.reporter(stylish))
 });
 
-gulp.task('default', ['lint','test']);
+gulp.task('default', ['typescript','lint','test']);
