@@ -1,0 +1,1 @@
+angular.module("vicky",["vicky.controllers"]);
