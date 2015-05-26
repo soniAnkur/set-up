@@ -14,6 +14,16 @@ gulp.task('typescript', function() {
         });
 });
 
+gulp.task('test-typescript', function() {
+    console.log('Compiling test typescript');
+    return gulp.src(['test/**/*.ts'])
+        .pipe(ts({module: 'commonjs'}))
+        .pipe(gulp.dest('test'))
+        .on('finish', function(){
+            console.log("finished compiling test typescript")
+        });
+});
+
 var testFiles = [
     'node_modules/angular/angular.js',
     'node_modules/angular-mocks/angular-mocks.js',
@@ -40,4 +50,4 @@ gulp.task('lint', function () {
   return gulp.src(['**/*.js', '!node_modules{,/**}']).pipe(jshint()).pipe(jshint.reporter(stylish))
 });
 
-gulp.task('default', ['typescript','lint','test']);
+gulp.task('default', ['test-typescript','typescript','lint','test']);

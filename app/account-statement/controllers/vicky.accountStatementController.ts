@@ -1,23 +1,22 @@
 ///<reference path="../../../typings/tsd.d.ts" />
-///<reference path="../services/vicky.accountStatementService.ts" />
+import AccountStatementService = require("../services/vicky.accountStatementService");
 
 'use strict';
 
 interface AccountStatementScope extends ng.IScope {
 
     moduleName : string;
-    iBanCollection : Array<any>;
+    iBanCollection : Array<AccountStatementService.IIbanBO>;
 }
 
 class AccountStatementController {
     static id : string = "vicky.accountStatementController";
 
-
-
-    constructor(private $scope : AccountStatementScope,private $http : ng.IHttpService ){
+    constructor(private $scope : AccountStatementScope,$service : AccountStatementService.IAccountStatementService ){
         $scope.moduleName = "accountStatement";
-      /*  $scope.iBanCollection = this.$http.get("/myDummyURL").then(response : ng.IHttpPromiseCallbackArg<IStockProvider[]>))*/
-
+      // $scope.iBanCollection = $service.getIbanCollection().then((response: Array<AccountStatementService.IIbanBO>) : Array<AccountStatementService.IIbanBO> => {
+      //     return response.data;
+     //  });
     }
 }
 

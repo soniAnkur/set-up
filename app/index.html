@@ -1,51 +1,17 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Your Website</title>
+
 </head>
 
 <body>
 
-	<div>
 
 
-<div>
-HTML as a declarative UI
-Data Models (also called scopes) are just simple JavaScript objects
-Property found on the scope are automatically data bound to the view and are watched for changes
-Directives allow us to invent our own HTML elements (accordion, grid)
-All DOM manipulation is put into directives separating them from the MVC app
-Filters restructure/format the data before they reach the view (formatting decimal places, filtering an array based on a parameter, pagination); similar to directives in the sense that they are stand-alone functions separate from your app, but are concerned only with data transformations rather than DOM manipulation
-DOM manipulations and service calls are separate, finally!
-Controllers are light-weight, Services should do all the heavy lifting
-Unit and E2E testing ready - DI and mock HTTP provider
-Can bookmark links
-</div>
-<DIV>
-Teaches the browser new syntax through a construct we call directives. Examples include:
-* Data binding, as in {{}}.
-* DOM control structures for repeating/hiding DOM fragments.
-* Support for forms and form validation.
-* Attaching code-behind to DOM elements.
-* Grouping of HTML into reusable components.
-</DIV>
-Setting up Karma to run unit tests in PhantomJS and Chrome
-
-<div>
-npm install -g karma --save-dev
-npm install -g phantomjs
-npm install -g karma-jasmine --save-dev
-npm install -g karma-phantomjs-launcher --save-dev
-npm install -g karma-chrome-launcher --save-dev
-karma init karma.conf.js
-karma start karma.conf.js
-
-npm install -g karma-coverage
-karma start karma.conf.js
-</div>
-</div>
+<script data-main="vicky.require.config.js" src="../node_modules/require/require.js"></script>
 </body>
 
 
