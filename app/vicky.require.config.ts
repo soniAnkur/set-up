@@ -1,4 +1,5 @@
-﻿"use strict";
+﻿///<reference path="../typings/tsd.d.ts"/>
+"use strict";
 
 require.config({
     paths: {
@@ -39,7 +40,7 @@ require.config({
             exports: "registry"
         },
         "main": {
-            deps: ["angular", "angular-route", "registry", "angular-ui","restangular"],
+            deps: ["angular", "angular-route", "registry","restangular"],
             exports: "main"
         }
     }

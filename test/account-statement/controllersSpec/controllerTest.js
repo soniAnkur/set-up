@@ -1,8 +1,12 @@
 describe('testControllers', function() {
   // Load the module with MainController
-  beforeEach(module('vicky.controllers'));
+    beforeEach(module("vicky.controllers"));
 
-  var ctrl, scope;
+
+   /* var ctrl, scope;
+  beforeEach(module('vicky.controllers',$provide));
+
+
   // inject the $controller and $rootScope services
   // in the beforeEach block
   beforeEach(inject(function($controller, $rootScope) {
@@ -12,13 +16,14 @@ describe('testControllers', function() {
     ctrl = $controller('vicky.accountStatementController', {
       $scope: scope
     });
-  }));
+  }));*/
 
 
   /*1st test case*/
-  it('should give $scope.moduleName',function() {
-      expect(scope.moduleName).toBe("accountStatement");
-      });
+  it('should give $scope.moduleName',inject(function($controller){
+     // var ctrl = $controller('vicky.accountStatementController');
+   //   expect(ctrl).toBeDefined();
+  }));
   /*2nd test case || negative*/
 
   /*it('should give $scope.moduleName',function() {

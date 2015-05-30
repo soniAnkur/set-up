@@ -1,13 +1,15 @@
-'use strict';
-var AccountStatementController = (function () {
-    function AccountStatementController($scope, $service) {
-        this.$scope = $scope;
-        $scope.moduleName = "accountStatement";
-        // $scope.iBanCollection = $service.getIbanCollection().then((response: Array<AccountStatementService.IIbanBO>) : Array<AccountStatementService.IIbanBO> => {
-        //     return response.data;
-        //  });
-    }
-    AccountStatementController.id = "vicky.accountStatementController";
-    return AccountStatementController;
-})();
-angular.module("vicky.controllers").controller(AccountStatementController.id, AccountStatementController);
+define(["require", "exports", "../services/vicky.accountStatementService"], function (require, exports, AccountStatementService) {
+    var AccountStatementController = (function () {
+        function AccountStatementController($scope, accountStatmentService) {
+            this.$scope = $scope;
+            this.accountStatmentService = accountStatmentService;
+            $scope.moduleName = "accountStatement";
+            $scope.iBanCollection = accountStatmentService.getIbanCollection();
+        }
+        AccountStatementController.id = "vicky.accountStatementController";
+        AccountStatementController.$inject = ["$scope", AccountStatementService.AccountStatementService.id];
+        return AccountStatementController;
+    })();
+    exports.AccountStatementController = AccountStatementController;
+    angular.module("vicky.controllers").controller(AccountStatementController.id, AccountStatementController);
+});

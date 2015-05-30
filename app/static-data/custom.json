@@ -1,0 +1,148 @@
+[
+  {
+    "IBAN": "SABAT12345678",
+    "Statement Type": [
+      {
+        "ID": "MT941",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE",
+            "RADIO3": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "MT940",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "CAMT53",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "XML-Umsatzinfo seit letztem Auszug (camt.052)",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053)",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053) mit Belegimages",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053) mit Belegdaten und Belegimages",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Retourdatenträger (camt.054, Gutschriften/Lastschriften)",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "CREMUL",
+        "Deselection": [
+          {
+            "RADIO3": "TRUE"
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "IBAN": "TBNF431234321",
+    "Statement Type": [
+      {
+        "ID": "MT941",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE",
+            "RADIO3": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "MT940",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "CAMT53",
+        "Deselection": [
+          {
+            "RADIO1": "TRUE",
+            "RADIO2": "TRUE"
+          }
+        ]
+      },
+      {
+        "ID": "XML-Umsatzinfo seit letztem Auszug (camt.052)",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053)",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053) mit Belegimages",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Kontoauszug (camt.053) mit Belegdaten und Belegimages",
+        "Deselection": [
+          {
+          }
+        ]
+      },
+      {
+        "ID": "XML-Retourdatenträger (camt.054, Gutschriften/Lastschriften)",
+        "Deselection": [
+          {
+          }
+        ]
+      }
+
+    ]
+  }
+]

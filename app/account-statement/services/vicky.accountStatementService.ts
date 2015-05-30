@@ -1,29 +1,23 @@
-///<reference path="../../../typings/tsd.d.ts" />
+///<reference path="../../../typings/restangular/restangular.d.ts" />
 "use strict";
 export interface IAccountStatementService{
-    getIbanCollection() : ng.IPromise<Array<IIbanBO>>;
+    getIbanCollection() : Array<any>;
 }
 
-export interface IIbanBO{
-    id:number;
-    value:string;
-}
 export class AccountStatementService implements  IAccountStatementService{
-    static id: string = "vicky.service.accountStatementService";
-    constructor(private $http: ng.IHttpService ) {
-        this.$http = $http;
+    static id: string = "vicky.accountStatementService";
+
+    constructor(private Restangular : restangular.IService ) {
+        this.Restangular = Restangular;
     }
-    getIbanCollection(): ng.IPromise<Array<IIbanBO>> {
-        return this.$http.get("location")
-            .then((response: ng.IHttpPromiseCallbackArg<Array<IIbanBO>>): Array<IIbanBO>=> {
-                return response.data;
-            });
+    getIbanCollection(): Array<any> {
+       return this.Restangular.all("custom.json").getList().$object;
     }
 }
-factory.$inject = ["$http"];
+factory.$inject = ["Restangular"];
 
-function factory($http: ng.IHttpService): IAccountStatementService {
-    return new AccountStatementService($http);
+function factory(restangular : restangular.IService): IAccountStatementService {
+    return new AccountStatementService(restangular);
 }
 
 angular.module("vicky.services").factory(AccountStatementService.id, factory);

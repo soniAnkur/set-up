@@ -10,22 +10,21 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','requirejs'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'app/common/conf/app.modules.registry.js',
-      'app/common/conf/app.core.module.js',
-      'app/**/*.js',
-      'test/**/*.js'
+      { pattern: 'node_modules/angular/angular.js', included: true },
+      { pattern: 'node_modules/angular-mocks/angular-mocks.js', included: true },
+      { pattern: 'app/account-statement/services/vicky.accountStatementService.js', included: true },
+      { pattern: 'app/account-statement/controllers/vicky.accountStatementController.js', included: true },
+      { pattern: 'test/**/*Test.js', included: false},
+      'test-main.js',
     ],
-
-
     // list of files to exclude
     exclude: [
+      'app/vicky.require.config.js'
     ],
 
 
@@ -66,6 +65,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS'],
+
 
 
     // Continuous Integration mode
